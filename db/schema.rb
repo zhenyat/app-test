@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_19_185242) do
+ActiveRecord::Schema.define(version: 2021_12_19_065612) do
 
   create_table "articles", force: :cascade do |t|
     t.string "author", null: false
@@ -18,6 +18,25 @@ ActiveRecord::Schema.define(version: 2021_11_19_185242) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "newsbites", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "content", null: false
+    t.datetime "published_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_newsbites_on_title", unique: true
+  end
+
+  create_table "pieces", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.datetime "published_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["slug"], name: "index_pieces_on_slug"
+    t.index ["title"], name: "index_pieces_on_title"
   end
 
 end

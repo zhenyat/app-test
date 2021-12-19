@@ -1,0 +1,14 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+hello-world:
+    title: "Hello World"
+    content: "We welcome the World!"
+
+# one:
+#   title: MyString
+#   content: MyText
+#   published_at: 2021-12-19 09:56:12
+
+# two:
+#   title: MyString
+#   content: MyText
+#   published_at: 2021-12-19 09:56:12
